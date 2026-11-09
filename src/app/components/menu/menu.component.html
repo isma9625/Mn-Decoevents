@@ -1,0 +1,37 @@
+<header class="header-area overlay">
+    <!-- Añadimos la clase dinámica para el scroll -->
+    <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<div class="container">
+			<a routerLink="home" class="navbar-brand">Mn.decoevents.com</a>
+			
+			<button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#main-nav">
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+			</button>
+			
+			<div id="main-nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li><a routerLink="home" class="nav-item nav-link">Inicio</a></li>
+					
+					<li>
+                        <a (click)="scrollTo('eventos')" class="nav-item nav-link" style="cursor: pointer;">Eventos</a>
+                    </li>
+						<li>
+                        <a (click)="scrollTo('articulos')" class="nav-item nav-link" style="cursor: pointer;">Articulos</a>
+                    </li>
+					<li>
+                        <a (click)="scrollTo('collections')" class="nav-item nav-link" style="cursor: pointer;">Collections</a>
+                    </li>
+						<li>
+                        <a (click)="scrollTo('contacto')" class="nav-item nav-link" style="cursor: pointer;">Contacto</a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<main class="col p-0 d-flex flex-column flex-grow-1">
+    <router-outlet></router-outlet>
+</main>

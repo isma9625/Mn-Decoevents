@@ -1,0 +1,230 @@
+/* ========================================================
+   TU DISEÑO ORIGINAL RESTAURADO
+   ======================================================== */
+
+
+.navbar {
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  transition: background 0.4s ease-in-out;
+  z-index: 99999;
+}
+
+.navbar .navbar-brand {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Icono hamburguesa */
+.navbar .navbar-toggler {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.navbar .navbar-toggler .menu-icon-bar {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(-1px);
+  transition: all 0.3s ease-in;
+}
+
+.navbar .navbar-toggler .menu-icon-bar:first-child {
+  opacity: 1;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.navbar .navbar-toggler .menu-icon-bar:last-child {
+  opacity: 1;
+  transform: translateY(-1px) rotate(135deg);
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar {
+  opacity: 1;
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar:first-child {
+  transform: translateY(-7px) rotate(0);
+}
+
+.navbar .navbar-toggler.collapsed .menu-icon-bar:last-child {
+  transform: translateY(5px) rotate(0);
+}
+
+/* Enlaces */
+.navbar .navbar-nav .nav-link {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.7rem;
+  padding: 23px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: #f7f6f6;       
+}
+
+/* Desplegables */
+.navbar .dropdown-menu {
+  padding: 0;
+  background-color: #fff;
+  min-width: 200px;
+  animation: dropdown-animation 0.3s;
+  transform-origin: top;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  position: relative;
+  padding: 10px 20px;
+  color: #333333;
+  font-size: 1.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.2s ease-in;
+}
+
+.navbar .dropdown-menu .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background: transparent;
+  color: #000000;
+}
+
+.navbar .dropdown-menu .dropdown-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: 5px;
+  background-color: #333333;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover::before {
+  opacity: 1;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  animation: navbar-animation 0.6s;
+}
+
+/* Línea de hover (Solo escritorio) */
+@media screen and (min-width: 767px) {
+  .navbar .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 30%;
+    right: 30%;
+    height: 3px;
+    background-color: #EBD4CB !important;
+    transform: scaleX(0);
+    transition: transform 0.1s ease-in;
+  }
+  .navbar .navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ========================================================
+   NUEVO: ESTADO AL HACER SCROLL
+   ======================================================== */
+.navbar.navbar-scrolled {
+  background-color: #EBD4CB !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Cambiamos el color de la línea a oscuro al bajar */
+.navbar.navbar-scrolled .navbar-nav .nav-link::after {
+  background-color: #333333 !important; 
+}
+
+.navbar.navbar-scrolled .navbar-brand,
+.navbar.navbar-scrolled .navbar-nav .nav-link {
+  color: #333333 !important;
+}
+
+.navbar.navbar-scrolled .navbar-nav .nav-link:hover {
+  color: #000000 !important;
+}
+
+.navbar.navbar-scrolled .navbar-toggler .menu-icon-bar {
+  background-color: #333333 !important;
+}
+
+/* ========================================================
+  RESPONSIVE (Móvil)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+  /* QUITAMOS el margen de 350px en móvil para que quepa */
+  #main-nav {
+    margin-left: 0; 
+  }
+  
+  .navbar-brand {
+    margin-left: 20px;
+  }
+  .navbar-collapse {
+    background-color: #FAF7F5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .navbar-collapse .nav-link {
+    color: #333333 !important;
+    padding: 10px 15px;
+  }
+}
+
+/* Animaciones */
+@keyframes navbar-animation {
+  0% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dropdown-animation {
+  0% { transform: scaleY(0); }
+  75% { transform: scaleY(1.1); }
+  100% { transform: scaleY(1); }
+}
+
+
+/* ========================================================
+   RESPONSIVE PARA EL TÍTULO (LOGO)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+  .navbar .navbar-brand {
+    font-size: 1.8rem; /* Lo reducimos de 2.5rem a 1.8rem en móviles */
+  }
+}
+
+/* Para móviles muy pequeños (como pantallas de 400px) */
+@media screen and (max-width: 400px) {
+  .navbar .navbar-brand {
+    font-size: 1.5rem; /* Aún más pequeño para que no se rompa */
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  /* El menú se alinea a la derecha del contenedor, sin margen fijo */
+  #main-nav {
+    justify-content: flex-end; 
+  }
+}

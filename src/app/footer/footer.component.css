@@ -1,0 +1,59 @@
+.footer {
+    background: linear-gradient(
+        to bottom,
+        #C29A88 0%,
+        #8F6A5A 100%
+    );
+    color: #ffffff;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+/* ========================================================
+   FOOTER: 3 COLUMNAS COMPACTAS EN MÓVIL Y TABLET
+   ======================================================== */
+@media screen and (max-width: 991px) {
+
+  .footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer h3 {
+    font-size: 20px;
+  }
+
+  .footer h5 {
+    font-size: 15px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    overflow-wrap: anywhere; /* evita que el correo se salga de su columna */
+  }
+
+  .footer img {
+    width: 28px;
+    height: auto;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 400px) {
+
+  .footer h3 {
+    font-size: 16px;
+  }
+
+  .footer h5 {
+    font-size: 13px;
+  }
+
+  .footer p {
+    font-size: 11px;
+  }
+
+  .footer img {
+    width: 24px;
+  }
+}

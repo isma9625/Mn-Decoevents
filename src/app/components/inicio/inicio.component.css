@@ -1,0 +1,1405 @@
+/*
+----------------------------------------------------------------------------------------
+ SECCION 1 
+-----------------------------------------------------------------------------------------
+ */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item img,
+.carousel-item video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* llena la pantalla recortando si hace falta */
+}
+
+.textoInicio{
+  position: absolute;
+  z-index: 1;
+  padding-top: 10rem;
+}
+
+.tituloInicio{
+  font-family: Lisu Bosa;
+  font-size: 36px;
+}
+
+.subTituloInicio{
+  font-family: Lisu Bosa;
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.botonInicio{
+  z-index: 1;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-family: Lisu Bosa;
+}
+
+
+.botonInicio:hover{
+  background-color: #EBD4CB;
+  border: none;
+  color: azure;
+}
+
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 2 
+-----------------------------------------------------------------------------------------
+ */
+
+ /*Fondo de la seccion */
+.bgcColorRosa{
+  background-color: #EBD4CB;
+}
+
+/*Estilos de lista */
+ul{
+  list-style: none;
+}
+
+/*Div de la seccion */
+
+
+/*Div donde se encuentra el primer texto y el titulo */
+.textoSeccion2 {
+  display: flex;
+  gap: 6rem;
+  width: fit-content;
+  
+}
+
+/*Div solo del titulo grande del texto */
+.tituloSeccion2{
+  max-width: 33rem;
+  
+}
+
+/*Estilos del titulo */
+.h1Seccion2{
+  font-weight: bold;
+  font-size: 60px;
+  font-family: League Spartan;
+  
+}
+
+/*Div donde se encuntra el pirmer texto con sus checks*/
+.textoApartadoCheck{
+  font-family: Lisu Bosa;
+  font-size: 24px;
+}
+
+
+/*EVENTOS*/
+.marginTopBloqueEventos{
+  margin-top: 8rem;
+}
+
+.tituloEventosSeccion2{
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+}
+
+.fotosEventosSeccion2{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.fotosEventosSeccion2 img{
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+  transition: transform 0.5s ease;
+}
+
+.fotosEventosSeccion2:hover img {
+  transform: scale(1.1);
+}
+
+.tituloImgEventos{
+  position: absolute;
+  font-family: "Lobster", cursive;
+  font-size: 45px;
+  inset: 0;
+  color: white;
+  background: rgba(0,0,0,0.25);
+  transition: background 0.3s ease;
+}
+
+.fotosEventosSeccion2:hover .tituloImgEventos {
+  background: rgba(0,0,0,0.5);
+}
+
+/*Animacion eventos*/
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.0s ease;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .botonEventos{
+  z-index: 1;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: Lisu Bosa;
+} */
+
+.botonEventos:hover{
+  background-color: aliceblue;
+  color: black;
+  transform: scale(1.1)
+  }
+
+
+/*ESTILOS QUIEN SOY*/
+.divQuienSoy{
+  background-color: #FFF1E7;
+  border-radius: 20px;
+  margin-top: 10rem;
+}
+
+.imgQuienSoy img{
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.textoQuienSoy h1{
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+}
+
+.textoQuienSoy p{
+  font-family: Lisu Bosa;
+  font-size: 24px;
+}
+
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 3
+-----------------------------------------------------------------------------------------
+ */
+
+
+
+.seccionParallax{
+  height: 75vh;
+  background-image: url("/img/fotoparallax.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 👈 esto crea el efecto */
+  display: flex;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; 
+}
+
+.textoParallax{
+  max-width: 66rem;
+}
+
+.textoParallax h1{
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+}
+
+.textoParallax p{
+  font-family: Lisu Bosa;
+  font-size: 24px;
+} 
+
+.waveParallax {
+  position: absolute;
+  top: 0; /* 👈 en vez de margin hacks */
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  
+}
+
+.waveParallax svg {
+  display: block;
+  width: 100%;
+  height: 120px; /* que coincida con el viewBox */
+}
+
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 4
+-----------------------------------------------------------------------------------------
+ */
+
+
+.bgcColorBlanco{
+  background-color: #FAF7F5;
+}
+
+
+.textoSeccion4{
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.textoSeccion4 h1{
+  font-size: 50px;
+}
+
+.textoSeccion4 p{
+  font-size: 20px;
+}
+
+.fotosCollections{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fotosCollections img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+}
+
+.flechaCollections{
+  position: absolute;
+  
+  top: 52%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.flechaCollectionsPrev{
+  position: absolute;
+  
+  top: 52%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 5
+-----------------------------------------------------------------------------------------
+ */
+
+.tituloSeccion5 h1{
+  font-size: 50px;
+}
+
+.divFases{
+  justify-content: center;
+  --bs-gutter-x: 12rem; /* puedes poner lo que quieras */
+
+  
+}
+
+.divFases p{
+  font-size: 20px;
+}
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 6
+-----------------------------------------------------------------------------------------
+ */
+
+.reseñas{
+  max-width: 60rem;
+}
+
+.reseñas p{
+  max-width:60rem;
+  margin:auto;
+  font-size: 24px;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.indicator .indicator-btn {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 4px;
+  border-radius: 15px;
+  background: #EBD4CB;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.indicator-btn.active {
+  width: 40px !important;
+  background: #c4a49b !important;
+  border-radius:10px;
+}
+
+.slider{
+  width:100%;
+  overflow:hidden;
+}
+
+.slide-row{
+  display:flex;
+  transition: transform 0.5s ease;
+}
+
+.slide-col{
+  position: relative;
+  min-width:100%;
+  flex:0 0 100%;
+}
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 6
+-----------------------------------------------------------------------------------------
+ */
+.articulo{
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #FAF7F5;
+  border-radius: 20px;
+}
+
+.articulo > img{
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 0 0 0 20px;
+}
+
+.divArticulos{
+  font-size: 24px;
+}
+
+.precio{
+  color: rgb(118, 54, 143);
+}
+
+.flechaArticulos{
+  position: absolute;
+  right: -150px;
+  top: 63%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.flechaArticulosPrev{
+  position: absolute;
+  left: -150px;
+  top: 63%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carrito img {
+    width: auto;
+}
+
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 7
+
+ALBUM EVENTOS
+-----------------------------------------------------------------------------------------
+ */
+
+.divAlbumEventos{
+    column-count: 5;
+    column-gap: 1.5rem;
+}
+
+.eventoItem{
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.eventoItem img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    transition: .3s ease;
+}
+
+.eventoItem:hover img{
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px){
+
+    .divAlbumEventos{
+        column-count: 3;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .divAlbumEventos{
+        column-count: 2;
+    }
+
+}
+
+@media (max-width: 576px){
+
+    .divAlbumEventos{
+        column-count: 1;
+    }
+
+}
+
+/*
+----------------------------------------------------------------------------------------
+SECCION 7 
+
+FORMULARIO CONTACTO
+-----------------------------------------------------------------------------------------
+ */
+
+.divFormulario{
+  background-color: #ffffff;
+  border-radius: 15px !important;
+}
+
+
+/* CALENDARIO */
+
+#calendar {
+  font-family: Arial, sans-serif;
+  
+}
+
+.calendar{
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cabecera {
+    
+    
+    background-color: #EBD4CB;
+    
+    border: 2px solid white;
+    border-radius: 15px 15px 0 0;
+}
+
+.selectorMes {
+    position: relative;
+    display: inline-block;
+}
+
+.month {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.desplegableMes {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    
+}
+
+.desplegableMes.mostrar {
+    display: block;
+}
+
+.opcionesMes {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcionMes {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.opcionMes:hover {
+    background-color: #EBD4CB;
+}
+
+.selectorAño {
+    position: relative;
+    display: inline-block;
+}
+
+.year {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.desplegableYear {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.desplegableYear.mostrar {
+    display: block;
+    cursor: pointer;
+}
+
+.opcionesYear {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcionYear {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.opcionYear:hover {
+    background-color: #EBD4CB;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 2px solid white;
+    border-top: none;
+}
+
+/* Estilos para todos los días */
+.days div {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Hover para días normales (no deshabilitados y no el día actual) */
+.days div:not(.disabled):not(.today):hover {
+    background-color: #EBD4CB !important;
+    cursor: pointer;
+     border-radius: 5px !important;
+    transform: scale(1.1);
+}
+
+/* Días deshabilitados (fuera del mes) */
+.days div.disabled {
+    color: #ccc !important;
+    background-color: transparent !important;
+    cursor: default !important;
+    transform: none !important;
+}
+
+
+.days div.today {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    padding: 4px !important;
+}
+
+.sombraInputs{
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.selectorFecha {
+  position: relative;
+}
+
+.flechaIzquierdaMonth{
+  position: absolute;
+  left: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+.flechaDerechaMonth{
+  position: absolute;
+  right: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.flechaIzquierdaYear{
+  position: absolute;
+  left: 70px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+
+.flechaDerechaYear{
+  position: absolute;
+  right: 70px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/**
+Modal calendario fecha
+**/
+
+
+.textoFechaDisponible h4 {
+    font-size: 50px;
+    color: green;
+}
+
+.textoFechaNoDisponible h4 {
+    font-size: 50px;
+    color: red;
+}
+
+.textoFechaDisponible p,
+.textoFechaNoDisponible p {
+    font-size: 18px;
+}
+
+
+/**
+Marcar dias no disponibles
+**/
+.disabled {
+  color: #999;
+  background-color: #eee;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.days div.selected {
+    border: 2px solid #c4a49b !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    background-color: #ffffff !important;
+    transform: none !important;
+}
+
+.days div.selected:hover {
+    background-color: #ffffff !important;
+    transform: none !important;
+}
+
+
+.seccionContacto {
+    background: linear-gradient(
+        to bottom,
+        #EBD4CB 0%,
+        #EBD4CB 60%,
+        #C29A88 100%
+    );
+}
+
+
+/* ========================================================
+   OCULTAR FLECHAS DE CARRUSELES EN MÓVILES
+   ======================================================== */
+@media screen and (max-width: 992px) {
+  /* Tus flechas personalizadas */
+  .flechaArticulos,
+  .flechaArticulosPrev,
+  .flechaCollections,
+  .flechaCollectionsPrev {
+    display: none !important;
+  }
+
+  /* Las flechas nativas del carrusel de Inicio (Bootstrap) */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+}
+
+
+.carousel {
+  touch-action: pan-y; /* Permite scroll vertical, pero el carrusel maneja el horizontal */
+}
+
+
+/* ========================================================
+  RESPONSIVE PARA EL TEXTO DE LA PORTADA (MÓVILES)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+  /* Los textos que ya tenías */
+  .tituloInicio {
+    font-size: 24px; 
+  }
+  .subTituloInicio {
+    font-size: 18px; 
+  }
+  
+  /* NUEVO: Añadimos un poco de margen a los lados para que no toque los bordes */
+  .textoInicio {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* NUEVO: Que el subtítulo ocupe como máximo el 80% del ancho (así baja de línea antes) */
+  .subTituloInicio p {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* El botón */
+  .botonInicio {
+    font-size: 16px;
+    width: 130px;
+    height: 45px;
+  }
+}
+
+
+/* ========================================================
+   RESPONSIVE PARA EL TÍTULO DE LA SECCIÓN 2
+   ======================================================== */
+@media screen and (max-width: 991px) {
+  .h1Seccion2 {
+    font-size: 36px; /* Lo reducimos de 60px a 36px en móvil/iPad */
+  }
+}
+
+/* Para móviles muy pequeños (como el iPhone 12) */
+@media screen and (max-width: 576px) {
+  .h1Seccion2 {
+    font-size: 32px; /* Aún más pequeño para que no haga tantas líneas */
+  }
+}
+
+
+/* ========================================================
+   REDUCIR EL ESPACIO EN MÓVIL E IPAD
+   ======================================================== */
+@media screen and (max-width: 991px) {
+  .textoSeccion2 {
+    gap: 2rem !important; /* Reducimos el espacio de 6rem a 2rem */
+    margin: 0 auto; /* Para que el bloque se mantenga centrado */
+  }
+}
+
+
+/* ========================================================
+   CARRUSEL DESLIZABLE PARA EVENTOS EN MÓVIL Y IPAD
+   ======================================================== */
+@media screen and (max-width: 991px) {
+  
+  /* Hacemos que el carrusel ocupe el 100% del ancho de la pantalla real */
+  .carrusel-eventos-movil {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 1rem; 
+    
+    /* El margen que evita que la foto toque el borde */
+    padding-left: 20px; 
+    padding-right: 20px; 
+    
+    gap: 0; 
+  }
+
+  /* Ocultamos la barra de scroll */
+  .carrusel-eventos-movil::-webkit-scrollbar {
+    display: none;
+  }
+  .carrusel-eventos-movil {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Tamaño de las fotos */
+  .carrusel-eventos-movil .col-lg-3 {
+    flex: 0 0 75%; 
+    max-width: 75%;
+    scroll-snap-align: center; 
+    padding: 0;
+    margin-right: 15px; 
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  /* 1. Evitamos que la foto sea gigante en el móvil */
+  .imgQuienSoy img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  /* 2. Reducimos un poco el título en móvil */
+  .textoQuienSoy h1 {
+    font-size: 36px; 
+  }
+
+  /* 1. Reducimos un pelín el texto y le damos márgenes a los lados */
+  .textoQuienSoy p {
+    font-size: 16px; /* Letra un poco más pequeña para que quepa más en cada línea */
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 90%; /* Obliga a que el texto no toque los bordes, haciendo las líneas más cortas */
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  /* 2. Hacemos la foto un poco más bajita para que no ocupe tanto */
+  .imgQuienSoy img {
+    max-height: 300px; /* En móvil, la limitamos a 300px de alto */
+  }
+}
+
+
+/* ========================================================
+   RESPONSIVE PARA LA SECCIÓN PARALLAX (MÓVILES)
+   ======================================================== */
+@media screen and (max-width: 767px) {
+  /* 1. Reducimos el título (de 50px a 32px) */
+  .textoParallax h1 {
+    font-size: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* 2. Reducimos el párrafo (de 24px a 16px) */
+  .textoParallax p {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 1rem !important; /* Reducimos el margen superior */
+  }
+}
+
+
+
+/* ========================================================
+   CARRUSEL DESLIZABLE PARA COLLECTIONS (SOLO MÓVIL)
+   ======================================================== */
+@media screen and (max-width: 991px) {
+  
+  /* Le damos el scroll táctil solo a la versión de móvil */
+  .carrusel-collections-movil {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    display: flex !important;
+    flex-wrap: nowrap !important; 
+    overflow-x: auto !important; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 1rem; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    gap: 0; 
+  }
+
+  /* Ocultamos la barra de scroll fea */
+  .carrusel-collections-movil::-webkit-scrollbar {
+    display: none;
+  }
+  .carrusel-collections-movil {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Tamaño de las fotos: 85% para que asome la siguiente */
+  .carrusel-collections-movil .col-lg-4 {
+    flex: 0 0 85%; 
+    max-width: 85%;
+    scroll-snap-align: center; 
+    padding: 0;
+    margin-right: 15px; 
+  }
+}
+
+/* ========================================================
+   COLLECTIONS: FLECHAS DENTRO DEL CARRUSEL (ESCRITORIO)
+   ======================================================== */
+@media screen and (min-width: 992px) {
+
+  /* Espacio reservado a los lados para las flechas */
+  #carouselCollections {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .flechaCollectionsPrev {
+    left: 0;
+  }
+
+  .flechaCollections {
+    right: 0;
+  }
+
+  .flechaCollections img,
+  .flechaCollectionsPrev img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+/* Evita que las fotos se deformen */
+.fotosCollections img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+/* ========================================================
+   DISEÑO ZIGZAG PARA LA SECCIÓN 5 (MÓVIL Y TABLET)
+   ======================================================== */
+
+@media screen and (max-width: 991px) {
+  
+  /* 1. Ajustamos el contenedor de las fases */
+  .divFases {
+    --bs-gutter-x: 1rem !important; /* Reducimos el espacio entre columnas */
+  }
+
+  /* 2. Estructura Flexbox para alinear Icono y Texto */
+  .fase-contenido {
+    display: flex;
+    align-items: center; /* Centra verticalmente icono y texto */
+    justify-content: center;
+    text-align: left; /* El texto alineado a la izquierda se lee mejor */
+    gap: 20px; /* Espacio entre el icono y el texto */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* Opcional: fondo de tarjeta */
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  /* 3. Fila invertida (Texto Izquierda, Icono Derecha) */
+  .fase-contenido.invertido {
+    flex-direction: row-reverse;
+    text-align: right; /* El texto se alinea a la derecha para que choque con el icono */
+  }
+
+  /* 4. Ajustes de los Iconos */
+  .icono-fase img {
+    width: 80px; /* Tamaño fijo para los iconos */
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 5. Ajustes de los Textos */
+  .texto-fase h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .texto-fase p {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+}
+
+/* En móviles muy pequeños, reducimos un poco más el icono */
+@media screen and (max-width: 400px) {
+  .icono-fase img {
+    width: 60px;
+  }
+  .texto-fase h2 {
+    font-size: 20px;
+  }
+  .texto-fase p {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================================
+   RESPONSIVE PARA SECCIÓN DE RESEÑAS (MÓVILES Y TABLETS)
+   ======================================================== */
+
+@media screen and (max-width: 991px) {
+  
+  /* 1. Ajustamos el tamaño del icono de comillas en móvil */
+  .iconoComillas {
+    width: 50px; /* En escritorio probablemente sea más grande */
+    height: auto;
+  }
+
+  /* 2. Ajustamos el texto de la reseña */
+  .reseñas {
+    padding-left: 20px; /* Para que el texto no toque los bordes de la pantalla */
+    padding-right: 20px;
+    max-width: 100%; 
+  }
+
+  .reseñas p {
+    font-size: 16px; /* Reducimos de 24px a 16px */
+    line-height: 1.6; /* Damos un poco de aire entre líneas */
+    margin-bottom: 1.5rem; 
+  }
+
+  /* El nombre del cliente un poco más pequeño */
+  .reseñas .fw-bold {
+    font-size: 14px; 
+  }
+
+  /* 3. Espaciado del carrusel (los puntitos) */
+  .indicator {
+    margin-top: 1.5rem; /* Reducimos el margen superior de 4rem a 1.5rem */
+  }
+
+  /* 4. Hacer los puntitos un poco más grandes para que sea fácil darle con el dedo */
+  .indicator .indicator-btn {
+    height: 12px;
+    width: 12px;
+    margin: 6px; /* Más separación */
+  }
+
+  .indicator-btn.active {
+    width: 30px !important; /* La píldora activa un poco más corta */
+  }
+}
+
+/* Ajuste extra para móviles muy pequeños (ej. iPhone SE) */
+@media screen and (max-width: 400px) {
+  .reseñas p {
+    font-size: 15px; /* Un pelín más pequeño para que no ocupe tanto alto */
+  }
+}
+
+/* ========================================================
+   ARTÍCULOS: FLECHAS DENTRO DEL CARRUSEL (ESCRITORIO)
+   ======================================================== */
+@media screen and (min-width: 992px) {
+
+  #carouselArticulos {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .flechaArticulosPrev {
+    left: 0;
+  }
+
+  .flechaArticulos {
+    right: 0;
+  }
+
+  .flechaArticulos img,
+  .flechaArticulosPrev img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+/* ========================================================
+   CARRUSEL DESLIZABLE PARA ARTÍCULOS (MÓVIL E IPAD)
+   ======================================================== */
+@media screen and (max-width: 991px) {
+
+  .carrusel-articulos-movil {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 0;
+  }
+
+  .carrusel-articulos-movil::-webkit-scrollbar {
+    display: none;
+  }
+  .carrusel-articulos-movil {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 75% para que asome la siguiente tarjeta */
+  .carrusel-articulos-movil .col-lg-3 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    scroll-snap-align: center;
+    padding: 0;
+    margin-right: 15px;
+  }
+}
+
+.carrito img {
+  width: auto;
+  max-width: 100%;
+}
+
+/* ========================================================
+   ÁLBUM DE EVENTOS: 2 COLUMNAS EN MÓVILES
+   ======================================================== */
+@media screen and (max-width: 768px) {
+  .divAlbumEventos {
+    column-count: 2 !important; /* Fuerza 2 columnas en móvil */
+    column-gap: 1rem; /* Reducimos un poquito el espacio entre ellas */
+  }
+}
+
+/* Para móviles muy pequeños (como el iPhone 12) */
+@media screen and (max-width: 400px) {
+  .divAlbumEventos {
+    column-count: 2 !important; /* Lo dejamos en 2 para que no se vean diminutas */
+    column-gap: 0.5rem; /* Menos espacio aún para que quepan mejor */
+  }
+}
+
+
+/* ========================================================
+   FORMULARIO DE CONTACTO: MÓVIL Y TABLET
+   ======================================================== */
+@media screen and (max-width: 991px) {
+
+  /* Tarjeta blanca: sin márgenes laterales extra */
+  .seccionContacto .divFormulario {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Textarea más baja en móvil (en escritorio se queda como está) */
+  .seccionContacto textarea {
+    height: 140px;
+  }
+
+  /* Calendario compacto */
+  .days {
+    grid-gap: 8px;
+    padding: 8px;
+  }
+
+  .days div {
+    height: 34px;      /* suficiente para tocar con el dedo */
+    font-size: 15px;
+  }
+
+  .month,
+  .year {
+    font-size: 18px;
+  }
+
+  /* Flechas del calendario pegadas a los bordes de su columna */
+  .flechaIzquierdaMonth { left: 0; }
+  .flechaDerechaMonth   { right: 0; }
+  .flechaIzquierdaYear  { left: 0; }
+  .flechaDerechaYear    { right: 0; }
+
+  .flechaIzquierdaMonth img,
+  .flechaDerechaMonth img,
+  .flechaIzquierdaYear img,
+  .flechaDerechaYear img {
+    width: 16px;
+    height: auto;
+  }
+
+  /* Desplegables de mes y año más estrechos */
+  .desplegableMes,
+  .desplegableYear {
+    width: 130px;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 400px) {
+
+  .days {
+    grid-gap: 4px;
+    padding: 6px;
+  }
+
+  .days div {
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .month,
+  .year {
+    font-size: 16px;
+  }
+}
+
+/* ========================================================
+   MODALES (FECHA Y CONFIRMACIÓN): COMPACTOS EN MÓVIL
+   ======================================================== */
+@media screen and (max-width: 991px) {
+
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .modal-header,
+  .modal-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  /* Textos del modal de confirmación */
+  .modal-body strong {
+    font-size: 14px;
+  }
+
+  .modal-body p {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    overflow-wrap: anywhere; /* evita que un correo largo rompa el ancho */
+  }
+
+  /* Modal de fecha disponible / no disponible */
+  .textoFechaDisponible h4,
+  .textoFechaNoDisponible h4 {
+    font-size: 36px;
+  }
+
+  .textoFechaDisponible p,
+  .textoFechaNoDisponible p {
+    font-size: 15px;
+  }
+
+  /* Botones más pequeños */
+  .modal-footer .btn {
+    font-size: 14px;
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 400px) {
+
+  .modal-dialog {
+    margin: 0.75rem;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-body p,
+  .modal-body strong {
+    font-size: 13px;
+  }
+
+  .textoFechaDisponible h4,
+  .textoFechaNoDisponible h4 {
+    font-size: 30px;
+  }
+}
+
+/* Chevron del botón del calendario */
+.chevronCalendario {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;          /* compensa el giro para que quede centrado */
+  transition: transform 0.3s ease;
+}
+
+.chevronCalendario.abierto {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
